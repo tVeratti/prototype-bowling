@@ -1,14 +1,28 @@
 import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-// import { ThemeContext } from 'veratti-ui';
+import ThemeProvider from './ThemeProvider';
 
+import Header from './header/Header';
+import Banner from './banner/Banner';
+import Navigation from './navigation/Navigation';
 import Routes from './routes/Routes';
+import Footer from './footer/Footer';
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Routes />
+        <ThemeProvider>
+          <div className="app">
+            <Header />
+            <Banner />
+            <div className="app__content">
+              <Navigation />
+              <Routes />
+            </div>
+            <Footer />
+          </div>
+        </ThemeProvider>
       </BrowserRouter>
     );
   }
