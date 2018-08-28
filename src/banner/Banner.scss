@@ -1,0 +1,52 @@
+.banner {
+  position: relative;
+  height: 500px;
+  background: #ccc;
+  overflow: hidden;
+}
+
+$size-ball: 40rem;
+.banner__ball {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height:$size-ball;
+  transform: translateY(-50%);
+
+  svg {
+    width: $size-ball;
+  }
+}
+
+
+.banner__pins {
+  .banner__row {
+    position: absolute;
+  }
+
+  .parallax__body {
+    white-space: nowrap;
+  }
+
+  svg {
+    display: inline-block;
+    width: 50rem;
+    margin-left: -30rem;
+  }
+}
+
+$pin-color: #19663f;
+@mixin place-pins($total){
+  @for $i from 0 through ($total - 1) {
+    &:nth-child(#{$i + 1}) {
+      top: $i * 10%;
+      right: $i * 10%;
+      svg { fill: mix(white, $pin-color, $i * 10) }
+    }
+  }
+}
+
+.banner__row {
+  @include place-pins(4);
+}

@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import ThemeProvider from './ThemeProvider';
 
-import Header from './header/Header';
-import Banner from './banner/Banner';
-import Navigation from './navigation/Navigation';
-import Routes from './routes/Routes';
-import Footer from './footer/Footer';
+import Header from '../header/Header';
+import Banner from '../banner/Banner';
+import Navigation from '../navigation/Navigation';
+import Routes from '../routes/Routes';
+import Footer from '../footer/Footer';
+
+import './App.scss';
 
 class App extends Component {
   render() {
