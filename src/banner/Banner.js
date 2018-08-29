@@ -7,32 +7,29 @@ import Pin from '../assets/svg/bowling-pin';
 import './Banner.scss';
 
 class Banner extends Component {
-  renderRow(layer) {
+  renderPins(layer) {
     const pins = [...Array(layer)];
     return (
       <div className="banner__row">
-        <Parallax speed={0.5 / layer}>
-          {pins.map(_ => (
-            <Pin />
-          ))}
-        </Parallax>
+        <Parallax
+          speed={0.5 / layer}
+          render={top => pins.map((_, i) => <Pin key={i} style={{ top }} />)}
+        />
       </div>
     );
   }
+
   render() {
     return (
       <div className="banner">
-        <div className="banner__ball">
-          <Parallax speed={0.6}>
-            <Ball />
-          </Parallax>
-        </div>
+        <Parallax speed={0.6} render={top => <Ball style={{ top }} />} />
 
+        {/* Pins */}
         <div className="banner__pins">
-          {this.renderRow(4)}
-          {this.renderRow(3)}
-          {this.renderRow(2)}
-          {this.renderRow(1)}
+          {this.renderPins(4)}
+          {this.renderPins(3)}
+          {this.renderPins(2)}
+          {this.renderPins(1)}
         </div>
       </div>
     );

@@ -2,51 +2,43 @@
   position: relative;
   height: 500px;
   background: #ccc;
-  overflow: hidden;
 }
 
 $size-ball: 40rem;
-.banner__ball {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height:$size-ball;
-  transform: translateY(-50%);
+$size-pin: 20rem;
+$pin-color: #555;
 
-  svg {
-    width: $size-ball;
-  }
-}
+.ball { display: none; }
 
-
-.banner__pins {
-  .banner__row {
-    position: absolute;
-  }
-
-  .parallax__body {
-    white-space: nowrap;
-  }
-
-  svg {
-    display: inline-block;
-    width: 50rem;
-    margin-left: -30rem;
-  }
-}
-
-$pin-color: #19663f;
-@mixin place-pins($total){
-  @for $i from 0 through ($total - 1) {
-    &:nth-child(#{$i + 1}) {
-      top: $i * 10%;
-      right: $i * 10%;
-      svg { fill: mix(white, $pin-color, $i * 10) }
-    }
-  }
+.pin {
+  width: $size-pin;
+  height: $size-pin;
+  margin-left: $size-pin / -2;
 }
 
 .banner__row {
-  @include place-pins(4);
+  position: absolute;
+
+  // Place pins in 4 rows, offsetting
+  // each a tiny bit higher.
+  /**
+    * - - - -   :nth-child(0) 0%
+    *  - - -    :nth-child(1) 10%
+    *   - -     :nth-child(2) 20%
+    *    -      :nth-child(3) 30%
+    */
+  @for $i from 0 through (3) {
+    &:nth-child(#{$i + 1}) {
+      top: $i * 10%;
+      svg {
+        fill: mix(white, $pin-color, $i * 10);
+      }
+    }
+  }
+
+  // Explodey rotations
+  &:nth-child(2) svg {
+    transform: rotate(45deg);
+  }
 }
+

@@ -8,6 +8,7 @@ const Ball = props => (
     width="100%"
     height="100%"
     viewBox="0 0 297 297"
+    className="ball"
     {...props}
   >
     <path
