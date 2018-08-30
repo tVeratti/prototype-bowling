@@ -16,9 +16,10 @@ class App extends Component {
       <BrowserRouter>
         <ThemeProvider>
           <div className="app">
-            <Header />
             <Banner />
+
             <div className="app__content">
+              <Header />
               <Navigation />
               <Routes />
             </div>

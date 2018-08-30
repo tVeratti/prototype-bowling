@@ -4,16 +4,29 @@
 body {
   background: $base;
   font-family: Arial, Helvetica, sans-serif;
+  background: $base; /* fallback for old browsers */
+  // background-image: linear-gradient(
+  //   to bottom,
+  //   mix(mix($primary, $contrast, 70%), $base, 50%),
+  //   mix(mix($primary, $contrast, 50%), $base, 70%)
+  // );
+  background-image: linear-gradient(to bottom right, $primary, $base);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .app__content {
   position: absolute;
-  top: 90vh;
-  left: 0;
-  right: 0;
-  background: $base;
+  display: flex;
+  top: calc(100vh - 10rem);
+  left: 1rem;
+  right: 1rem;
+  border-radius: 1rem;
+  background: white;
   min-height: 10000px;
   z-index: 10;
-  color: $text;
-  box-shadow: -5px 0 5px rgba(black, 0.3);
+  color: $base;
+  box-shadow: 0 0 5px rgba(black, 0.3);
+  overflow: hidden;
 }

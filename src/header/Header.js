@@ -6,8 +6,7 @@ class Header extends Component {
   render() {
     return (
       <header className="header">
-        <h1>Parallax Bowling</h1>
-        <h2>1234 NW Bowling Ave., Kansas City, MO 64154</h2>
+        <h1>Bowling</h1>
       </header>
     );
   }

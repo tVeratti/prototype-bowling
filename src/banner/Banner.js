@@ -19,7 +19,7 @@ class Banner extends Component {
     const pins = [...Array(layer)];
 
     return (
-      <CSSTransition in={mounted} timeout={layer * 200} classNames="row">
+      <CSSTransition in={mounted} timeout={1000} classNames="row">
         <div className="banner__row">
           <Parallax
             speed={0.55 - layer * 0.1}
@@ -35,22 +35,16 @@ class Banner extends Component {
 
     return (
       <div className="banner">
-        {/* Background */}
-        <Parallax
-          speed={0.07}
-          render={top => <div style={{ top }} className="banner__background" />}
-        />
-
         <div className="banner__graphics">
-          {/* Ball */}
+          {/* Ball 
           <Parallax
             speed={0.5}
             render={top => (
-              <CSSTransition in={mounted} timeout={1000} classNames="ball">
+              <CSSTransition in={mounted} timeout={1500} classNames="ball">
                 <Ball style={{ top }} />
               </CSSTransition>
             )}
-          />
+          />*/}
 
           {/* Pins */}
           <div className="banner__pins">
