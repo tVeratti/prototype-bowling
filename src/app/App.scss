@@ -1,3 +1,19 @@
-.app {
-  min-height: 1000px;
+@import './reset';
+@import '../shared/colors';
+
+body {
+  background: $base;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app__content {
+  position: absolute;
+  top: 90vh;
+  left: 0;
+  right: 0;
+  background: $base;
+  min-height: 10000px;
+  z-index: 10;
+  color: $text;
+  box-shadow: -5px 0 5px rgba(black, 0.3);
 }

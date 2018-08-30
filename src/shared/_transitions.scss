@@ -1,0 +1,41 @@
+@function cubic($time: 0.2s) {
+  @return $time cubic-bezier(0, 0, 0.2, 1);
+}
+
+@keyframes fillrainbow {
+  $saturation: 40%;
+
+  0% {
+    fill: hsl(0, $saturation, 50%);
+  }
+
+  25% {
+    fill: hsl(50, $saturation, 50%);
+  }
+
+  50% {
+    fill: hsl(100, $saturation, 50%);
+  }
+
+  75% {
+    fill: hsl(250, $saturation, 50%);
+  }
+
+  100% {
+    fill: hsl(300, $saturation, 50%);
+  }
+}
+
+@keyframes filltheme {
+  0% {
+    fill: white;
+  }
+
+  80% {
+    fill: white;
+  }
+
+  100% {
+    fill: tomato;
+  }
+}
