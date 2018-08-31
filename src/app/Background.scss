@@ -12,8 +12,9 @@
     position: absolute;
     top: 0;
     fill: transparent;
-    stroke: mix($base, $primary, 50%);
-    stroke-width: 1rem;
+    stroke: rgba($base, 0.2);
+    stroke-width: 0.8rem;
+    transform: skew(-10deg);
 
     @for $i from 1 through (4) {
       &:nth-child(#{$i}) {
