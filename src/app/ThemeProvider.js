@@ -6,8 +6,8 @@ const theme = buildTheme({
   // prettier-ignore
   palette: {
       base:       '#363537',
-      primary:    '#EF2D56',
-      secondary:  '#0CCE6B',
+      primary:    '#0cce6b',
+      secondary:  '#318fe7',
       contrast:   '#ED7D3A',
 
       error:      '#df3e3e',

@@ -1,0 +1,24 @@
+@import '../shared/colors';
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+
+  svg {
+    position: absolute;
+    top: 0;
+    fill: transparent;
+    stroke: mix($base, $primary, 50%);
+    stroke-width: 1rem;
+
+    @for $i from 1 through (4) {
+      &:nth-child(#{$i}) {
+        top: 20rem * ($i - 1);
+      }
+    }
+  }
+}

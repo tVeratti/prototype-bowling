@@ -19,6 +19,9 @@ const Ball = props => (
 				s18.813,8.439,18.813,18.813S228.123,115.375,217.75,115.375z"
     /> */}
     <circle cx="100" cy="100" r="100" />
+    <circle style={{ fill: 'black' }} cx="50" cy="50" r="10" />
+    <circle style={{ fill: 'black' }} cx="100" cy="40" r="10" />
+    <circle style={{ fill: 'black' }} cx="85" cy="85" r="10" />
   </svg>
 );
 

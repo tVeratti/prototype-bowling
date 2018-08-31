@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { CSSTransition } from 'react-transition-group';
 import { Parallax } from 'veratti-ui';
 
 import Ball from '../assets/svg/ball';
@@ -19,14 +18,19 @@ class Banner extends Component {
     const pins = [...Array(layer)];
 
     return (
-      <CSSTransition in={mounted} timeout={1000} classNames="row">
-        <div className="banner__row">
-          <Parallax
-            speed={0.55 - layer * 0.1}
-            render={top => pins.map((_, i) => <Pin key={i} style={{ top }} />)}
-          />
-        </div>
-      </CSSTransition>
+      <div className="banner__row">
+        <Parallax
+          speed={0.5 - layer * 0.1}
+          render={top => {
+            const scroll = (top && top.replace('px', '')) || 1;
+            const animationDelay = scroll / 100 + 's';
+
+            return pins.map((_, i) => (
+              <Pin key={i} style={{ top, animationDelay }} />
+            ));
+          }}
+        />
+      </div>
     );
   }
 
@@ -36,15 +40,8 @@ class Banner extends Component {
     return (
       <div className="banner">
         <div className="banner__graphics">
-          {/* Ball 
-          <Parallax
-            speed={0.5}
-            render={top => (
-              <CSSTransition in={mounted} timeout={1500} classNames="ball">
-                <Ball style={{ top }} />
-              </CSSTransition>
-            )}
-          />*/}
+          {/* Ball  */}
+          <Parallax speed={0.6} render={top => <Ball style={{ top }} />} />
 
           {/* Pins */}
           <div className="banner__pins">

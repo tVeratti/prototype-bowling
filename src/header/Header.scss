@@ -1,24 +1,38 @@
 @import '../shared/colors';
 
 .header {
-  position: absolute;
+  display: flex;
+  position: fixed;
+  align-items: center;
   top: 0;
   left: 0;
-  width: 100%;
-  padding: 1rem;
+  right: 0;
+  height: 8rem;
+  padding: 1rem 5%;
   text-align: center;
+  //box-shadow: 0 0 5px rgba(black, 0.3);
   z-index: 15;
 
   $shadow-color: $primary;
   h1 {
     font-family: 'Bungee';
-    font-size: 72px;
-    color: $base;
-    //text-shadow: 0 0 8px $shadow-color;
+    font-size: 52px;
+    color: white;
+  }
 
-    // , 3px 3px 0 $shadow-color,
-    //   4px 4px 0 $shadow-color, 5px 5px 0 $shadow-color, 6px 6px 0 $shadow-color,
-    //   7px 7px 0 $shadow-color;
+  svg {
+    display: inline-block;
+    margin: 0 5%;
+    width: 4rem;
+    height: 4rem;
+    fill: white;
+  }
+
+  &:after {
+    content: '';
+    height: 2px;
+    flex-grow: 1;
+    background: white;
   }
 
   h2 {

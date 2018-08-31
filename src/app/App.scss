@@ -1,32 +1,35 @@
 @import './reset';
 @import '../shared/colors';
 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
   background: $base;
   font-family: Arial, Helvetica, sans-serif;
   background: $base; /* fallback for old browsers */
-  // background-image: linear-gradient(
-  //   to bottom,
-  //   mix(mix($primary, $contrast, 70%), $base, 50%),
-  //   mix(mix($primary, $contrast, 50%), $base, 70%)
-  // );
   background-image: linear-gradient(to bottom right, $primary, $base);
-  background-size: cover;
+  background-color: mix($primary, $base, 50%);
   background-attachment: fixed;
-  background-repeat: no-repeat;
+  //background-repeat: no-repeat;
 }
 
 .app__content {
   position: absolute;
-  display: flex;
-  top: calc(100vh - 10rem);
-  left: 1rem;
-  right: 1rem;
-  border-radius: 1rem;
-  background: white;
-  min-height: 10000px;
+  top: calc(100vh - 20rem);
+  left: 0;
+  right: 0;
+  padding-left: 34rem;
+  padding-right: 2rem;
+  padding-top: 5rem;
+  background: $base;
+  min-height: 2000px;
   z-index: 10;
-  color: $base;
-  box-shadow: 0 0 5px rgba(black, 0.3);
+  color: $text;
+
   overflow: hidden;
+  clip-path: polygon(0 5rem, 100% 0%, 100% 100%, 0% 100%);
 }

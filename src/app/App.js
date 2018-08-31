@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import ThemeProvider from './ThemeProvider';
 
+import Background from './Background';
 import Header from '../header/Header';
 import Banner from '../banner/Banner';
 import Navigation from '../navigation/Navigation';
@@ -16,10 +17,10 @@ class App extends Component {
       <BrowserRouter>
         <ThemeProvider>
           <div className="app">
+            <Background />
             <Banner />
-
+            <Header />
             <div className="app__content">
-              <Header />
               <Navigation />
               <Routes />
             </div>
