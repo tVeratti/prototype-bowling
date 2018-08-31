@@ -1,5 +1,6 @@
 @import './reset';
 @import '../shared/colors';
+@import '../shared/layers';
 
 *,
 *:before,
@@ -10,16 +11,15 @@
 body {
   background: $base;
   font-family: Arial, Helvetica, sans-serif;
-  background: $base; /* fallback for old browsers */
+  background: $base;
   background-image: linear-gradient(to bottom right, $primary, $base);
   background-color: mix($primary, $base, 50%);
   background-attachment: fixed;
-  //background-repeat: no-repeat;
 }
 
 .app__content {
   position: absolute;
-  top: calc(100vh - 20rem);
+  top: 90vh;
   left: 0;
   right: 0;
   padding-left: 34rem;
@@ -27,9 +27,8 @@ body {
   padding-top: 5rem;
   background: $base;
   min-height: 2000px;
-  z-index: 10;
+  z-index: $layer-app;
   color: $text;
-
   overflow: hidden;
   clip-path: polygon(0 5rem, 100% 0%, 100% 100%, 0% 100%);
 }
