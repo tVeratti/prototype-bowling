@@ -1,11 +1,8 @@
 @import '../shared/transitions';
 @import '../shared/colors';
 
-$offset-left: 25%;
 $size-pin: 45vh;
 $size-ball: 35vh;
-$size-total: 85rem;
-$position-left: 15%;
 
 .banner__pins {
   position: fixed;
@@ -16,13 +13,11 @@ $position-left: 15%;
 .pin {
   width: $size-pin / 2;
   height: $size-pin;
-  stroke-width: 3px;
 }
 
 .banner__row {
   display: flex;
   position: absolute;
-  left: $position-left;
 
   // Place pins in 4 rows, offsetting
   // each a tiny bit higher.
@@ -45,7 +40,6 @@ $position-left: 15%;
           &:nth-child(#{$j}) {
             left: $j * 10rem;
             fill: $pin-color-bw;
-            stroke: $pin-color-bw;
           }
         }
       }

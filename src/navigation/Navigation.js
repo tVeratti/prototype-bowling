@@ -6,7 +6,11 @@ class Navigation extends Component {
   render() {
     return (
       <nav className="navigation">
-        <Button>Home</Button>
+        <ul>
+          <li>
+            <Button>Home</Button>
+          </li>
+        </ul>
       </nav>
     );
   }

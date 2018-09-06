@@ -8,7 +8,7 @@ const theme = buildTheme({
       base:       '#363537',
       primary:    '#0cce6b',
       secondary:  '#318fe7',
-      contrast:   '#ED7D3A',
+      contrast:   '#2CDA9D',
 
       error:      '#df3e3e',
       text:       '#ccc'
