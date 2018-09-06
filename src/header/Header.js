@@ -46,7 +46,9 @@ class Header extends Component {
         >
           <span itemProp="address">1234 Bowling Ave, Kansas City, MO</span>
           <span itemProp="telephone">
-            <Button href="tel:5555555555">555-555-5555</Button>
+            <Button href="tel:5555555555" secondary>
+              555-555-5555
+            </Button>
           </span>
         </div>
       </header>
