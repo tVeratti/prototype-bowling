@@ -1,47 +1,41 @@
 import React, { PureComponent } from 'react';
 import { Parallax } from 'veratti-ui';
 
-import Ball from '../assets/svg/ball';
 import Pin from '../assets/svg/pin';
 
 import './Banner.scss';
 
 class Banner extends PureComponent {
-  renderPins(layer, animationDelay) {
+  renderRow(i, layer, scroll) {
+    let delay = layer / 2 + scroll / 50;
+    delay = Math.min(delay, 0) + 's';
+
+    return <Pin key={i} style={{ animationDelay: delay }} />;
+  }
+
+  renderPins(layer) {
     const pins = [...Array(layer)];
 
     return (
-      <div className="banner__row">
-        {pins.map((_, i) => (
-          <Pin key={i} style={{ animationDelay }} />
-        ))}
-      </div>
+      <Parallax
+        speed={0.7 - layer / 10}
+        render={(top, scroll) => (
+          <div className="banner__row" style={{ top }}>
+            {pins.map((_, i) => this.renderRow(i, layer, scroll))}
+          </div>
+        )}
+      />
     );
   }
 
   render() {
     return (
       <div className="banner">
-        <div className="banner__graphics">
-          {/* Ball  */}
-          <Parallax speed={0.6} render={top => <Ball style={{ top }} />} />
-
-          {/* Pins */}
-          <Parallax
-            speed={0.5}
-            render={(top, scroll) => {
-              const delay = scroll / 100 + 's';
-
-              return (
-                <div className="banner__pins" style={{ top }}>
-                  {this.renderPins(4, delay)}
-                  {this.renderPins(3, delay)}
-                  {this.renderPins(2, delay)}
-                  {this.renderPins(1, delay)}
-                </div>
-              );
-            }}
-          />
+        <div className="banner__pins">
+          {this.renderPins(4)}
+          {this.renderPins(3)}
+          {this.renderPins(2)}
+          {this.renderPins(1)}
         </div>
       </div>
     );

@@ -4,21 +4,19 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
-  left: 50%;
-  transform: translateX(-50%);
+  background-image: linear-gradient(to bottom right, $primary, $base);
+  background-color: mix($primary, $base, 50%);
+  background-attachment: fixed;
   z-index: -1;
 
   svg {
     position: absolute;
     top: 0;
-    fill: transparent;
-    stroke: rgba($base, 0.2);
-    stroke-width: 0.8rem;
-    transform: skew(-10deg);
+    fill: rgba($base, 0.1);
 
     @for $i from 1 through (4) {
       &:nth-child(#{$i}) {
-        top: 20rem * ($i - 1);
+        top: 10rem * ($i - 1);
       }
     }
   }

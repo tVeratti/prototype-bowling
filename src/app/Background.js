@@ -1,16 +1,15 @@
 import React from 'react';
-
-import Triangle from '../assets/svg/triangle';
+import { Parallax } from 'veratti-ui';
 
 import './Background.scss';
 
 const Background = props => (
-  <div className="background">
-    <Triangle />
-    <Triangle />
-    <Triangle />
-    <Triangle />
-  </div>
+  <Parallax
+    speed={0.1}
+    render={(top, scroll) => (
+      <div className="background" style={{ opacity: 1 - scroll / -70 }} />
+    )}
+  />
 );
 
 export default Background;

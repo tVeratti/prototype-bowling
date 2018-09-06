@@ -13,14 +13,18 @@
   text-align: center;
   z-index: $layer-header;
 
-  $shadow-color: $primary;
   h1 {
     font-family: 'Bungee';
     font-size: 52px;
     color: white;
   }
 
-  svg {
+  h2 {
+    font-size: 26px;
+    color: $base;
+  }
+
+  .header__deco {
     display: inline-block;
     margin: 0 5%;
     width: 4rem;
@@ -28,15 +32,11 @@
     fill: white;
   }
 
-  &:after {
-    content: '';
-    height: 2px;
+  .header__details {
     flex-grow: 1;
-    background: white;
-  }
-
-  h2 {
-    font-size: 26px;
-    color: $base;
+    padding: 1rem;
+    color: white;
+    text-align: right;
+    border-top: 2px solid white;
   }
 }

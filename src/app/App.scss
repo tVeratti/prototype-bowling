@@ -9,26 +9,32 @@
 }
 
 body {
-  background: $base;
+  background: mix($base, black, 60%);
   font-family: Arial, Helvetica, sans-serif;
-  background: $base;
-  background-image: linear-gradient(to bottom right, $primary, $base);
-  background-color: mix($primary, $base, 50%);
-  background-attachment: fixed;
 }
 
 .app__content {
   position: absolute;
-  top: 90vh;
+  top: 80vh;
   left: 0;
   right: 0;
   padding-left: 34rem;
   padding-right: 2rem;
-  padding-top: 5rem;
+  padding-top: 6rem;
   background: $base;
   min-height: 2000px;
   z-index: $layer-app;
   color: $text;
   overflow: hidden;
   clip-path: polygon(0 5rem, 100% 0%, 100% 100%, 0% 100%);
+}
+
+h2 {
+  color: white;
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 2rem;
 }
