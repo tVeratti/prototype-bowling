@@ -1,6 +1,11 @@
 @import './reset';
+@import '../shared/helpers';
 @import '../shared/colors';
 @import '../shared/layers';
+
+html {
+  box-sizing: border-box;
+}
 
 *,
 *:before,
@@ -18,14 +23,12 @@ body {
   top: 80vh;
   left: 0;
   right: 0;
-  padding-left: 28rem;
-  padding-right: 20rem;
+  padding-left: 20rem;
   padding-top: 6rem;
   background: $base;
   min-height: 2000px;
   z-index: $layer-app;
   color: $text;
-  overflow: hidden;
   clip-path: polygon(0 5rem, 100% 0%, 100% 100%, 0% 100%);
 }
 

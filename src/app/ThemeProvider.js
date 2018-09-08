@@ -11,7 +11,8 @@ const theme = buildTheme({
       contrast:   '#ef476f',
 
       error:      '#df3e3e',
-      text:       '#ccc'
+      text:       '#cccccc',
+      white:      '#ffffff'
     }
 });
 
