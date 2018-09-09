@@ -10,7 +10,6 @@ class Home extends Component {
     return (
       <div className="home">
         <h2>Imaginary Bowling</h2>
-        <div className="separator" />
         <h3>It's not a real place!</h3>
         <div className="separator" />
 
@@ -18,38 +17,41 @@ class Home extends Component {
         <div className="separator" />
         <div className="separator" />
         <div className="separator" />
-        <PromoGrid
-          panels={[
-            {
-              title: 'Parties',
-              button: 'Plan Party',
-              image: <img src="https://dummyimage.com/600x600/0cce6b/2f3942" />
-            },
-            {
-              title: 'Leagues',
-              button: 'Register',
-              image: <img src="https://dummyimage.com/600x600/aaa/2f3942" />
-            },
-            {
-              title: 'Tournaments',
-              button: 'View Schedule',
-              image: <img src="https://dummyimage.com/600x600/306bac/2f3942" />
-            },
-            {
-              title: 'Events',
-              button: 'View Schedule',
-              image: <img src="https://dummyimage.com/600x600/0cce6b/2f3942" />
-            },
-            {
-              title: 'Menu',
-              image: <img src="https://dummyimage.com/600x600/aaa/2f3942" />
-            },
-            {
-              title: 'Careers',
-              image: <img src="https://dummyimage.com/600x600/ef476f/2f3942" />
-            }
-          ]}
-        />
+
+        <div className="home__promo">
+          <PromoGrid
+            panels={[
+              {
+                title: 'Parties',
+                button: 'Plan',
+                image: <img src="https://picsum.photos/700/600/?random" />
+              },
+              {
+                title: 'Leagues',
+                button: 'Register',
+                image: <img src="https://picsum.photos/900/600/?random" />
+              },
+              {
+                title: 'Tournaments',
+                button: 'Calendar',
+                image: <img src="https://picsum.photos/500/600/?random" />
+              },
+              {
+                title: 'Events',
+                button: 'Schedule',
+                image: <img src="https://picsum.photos/730/600/?random" />
+              },
+              {
+                title: 'Menu',
+                image: <img src="https://picsum.photos/850/600/?random" />
+              },
+              {
+                title: 'Careers',
+                image: <img src="https://picsum.photos/650/600/?random" />
+              }
+            ]}
+          />
+        </div>
       </div>
     );
   }
