@@ -23,30 +23,38 @@ class Home extends Component {
             panels={[
               {
                 title: 'Parties',
-                button: 'Plan',
+                subtitle: 'Birthdays, Anniversaries, & more',
+                button: 'Plan Party',
                 image: <img src="https://picsum.photos/700/600/?random" />
               },
               {
                 title: 'Leagues',
-                button: 'Register',
+                subtitle: 'Teams for all skill levels',
+                button: 'Register Player',
                 image: <img src="https://picsum.photos/900/600/?random" />
               },
               {
                 title: 'Tournaments',
-                button: 'Calendar',
+                subtitle: 'Win prizes and bragging rights',
+                button: 'Register Team',
                 image: <img src="https://picsum.photos/500/600/?random" />
               },
               {
                 title: 'Events',
-                button: 'Schedule',
+                subtitle: 'Special games and themes',
+                button: 'Reserve Group',
                 image: <img src="https://picsum.photos/730/600/?random" />
               },
               {
                 title: 'Menu',
+                subtitle: 'Tastey treats',
+                button: 'Yum Yum',
                 image: <img src="https://picsum.photos/850/600/?random" />
               },
               {
                 title: 'Careers',
+                subtitle: 'Now hiring',
+                button: 'See Positions',
                 image: <img src="https://picsum.photos/650/600/?random" />
               }
             ]}
