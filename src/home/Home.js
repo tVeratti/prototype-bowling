@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import ipsum from 'lorem-ipsum';
+
 import { Button, PromoGrid } from 'veratti-ui';
+
+// Images
+import candles from '../assets/images/candles.jpg';
+import bowlers from '../assets/images/bowlers.jpg';
+import strike from '../assets/images/lane.jpg';
+import hands from '../assets/images/hands.jpg';
+import party from '../assets/images/party.jpg';
+import food from '../assets/images/food.jpg';
 
 import Ball from '../assets/svg/ball';
 import './Home.scss';
@@ -25,37 +34,37 @@ class Home extends Component {
                 title: 'Parties',
                 subtitle: 'Birthdays, Anniversaries, & more',
                 button: 'Plan Party',
-                image: 'https://picsum.photos/700/600/?random'
+                image: candles
               },
               {
                 title: 'Leagues',
                 subtitle: 'Teams for all skill levels',
                 button: 'Register Player',
-                image: 'https://picsum.photos/900/600/?random'
+                image: bowlers
               },
               {
                 title: 'Tournaments',
                 subtitle: 'Win prizes and bragging rights',
                 button: 'Register Team',
-                image: 'https://picsum.photos/500/600/?random'
+                image: hands
               },
               {
                 title: 'Events',
                 subtitle: 'Special games and themes',
                 button: 'Reserve Group',
-                image: 'https://picsum.photos/730/600/?random'
+                image: party
               },
               {
                 title: 'Menu',
                 subtitle: 'Tastey treats',
                 button: 'Yum Yum',
-                image: 'https://picsum.photos/850/600/?random'
+                image: food
               },
               {
                 title: 'Careers',
                 subtitle: 'Now hiring',
                 button: 'See Positions',
-                image: 'https://picsum.photos/650/600/?random'
+                image: strike
               }
             ]}
           />
