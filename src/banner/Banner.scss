@@ -8,11 +8,11 @@ $size-ball: 35vh;
   position: fixed;
   top: 10vh;
   left: 50%;
-}
 
-.pin {
-  width: $size-pin / 2;
-  height: $size-pin;
+  .pin {
+    width: $size-pin / 2;
+    height: $size-pin;
+  }
 }
 
 .banner__row {

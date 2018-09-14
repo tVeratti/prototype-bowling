@@ -25,37 +25,37 @@ class Home extends Component {
                 title: 'Parties',
                 subtitle: 'Birthdays, Anniversaries, & more',
                 button: 'Plan Party',
-                image: <img src="https://picsum.photos/700/600/?random" />
+                image: 'https://picsum.photos/700/600/?random'
               },
               {
                 title: 'Leagues',
                 subtitle: 'Teams for all skill levels',
                 button: 'Register Player',
-                image: <img src="https://picsum.photos/900/600/?random" />
+                image: 'https://picsum.photos/900/600/?random'
               },
               {
                 title: 'Tournaments',
                 subtitle: 'Win prizes and bragging rights',
                 button: 'Register Team',
-                image: <img src="https://picsum.photos/500/600/?random" />
+                image: 'https://picsum.photos/500/600/?random'
               },
               {
                 title: 'Events',
                 subtitle: 'Special games and themes',
                 button: 'Reserve Group',
-                image: <img src="https://picsum.photos/730/600/?random" />
+                image: 'https://picsum.photos/730/600/?random'
               },
               {
                 title: 'Menu',
                 subtitle: 'Tastey treats',
                 button: 'Yum Yum',
-                image: <img src="https://picsum.photos/850/600/?random" />
+                image: 'https://picsum.photos/850/600/?random'
               },
               {
                 title: 'Careers',
                 subtitle: 'Now hiring',
                 button: 'See Positions',
-                image: <img src="https://picsum.photos/650/600/?random" />
+                image: 'https://picsum.photos/650/600/?random'
               }
             ]}
           />

@@ -6,7 +6,7 @@
   top: 0;
   left: 0;
   bottom: 0;
-  width: 20rem;
+  width: 8rem;
   padding: 1rem;
   padding-top: 7rem;
   background: rgba(black, 0.1);
@@ -14,11 +14,16 @@
 }
 
 .navigation__links {
+  position: sticky;
+  top: 0;
   text-align: center;
-  transform: rotate(-3deg);
+  fill: $primary;
+  width: 100%;
 
   .button {
     margin: auto;
-    width: 80%;
+    width: 100%;
+    min-width: 0;
+    padding: 1rem;
   }
 }
