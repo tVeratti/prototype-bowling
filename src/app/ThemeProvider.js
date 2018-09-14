@@ -5,7 +5,7 @@ const theme = buildTheme({
   font: 'Arial, Helvetica, sans-serif',
   // prettier-ignore
   palette: {
-      base:       '#363537',
+      base:       '#2f3942',
       primary:    '#306bac',
       secondary:  '#0cce6b',
       contrast:   '#ef476f',

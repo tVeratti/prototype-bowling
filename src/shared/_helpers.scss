@@ -1,4 +1,14 @@
 .separator {
   visibility: hidden;
-  height: 2rem;
+  height: 4rem;
+}
+
+.center {
+  margin: auto;
+  text-align: center;
+}
+
+.paragraph {
+  width: 60%;
+  max-width: 50rem;
 }

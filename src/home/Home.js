@@ -18,14 +18,15 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
-        <h2>Imaginary Bowling</h2>
-        <h3>It's not a real place!</h3>
-        <div className="separator" />
-
-        <div>{ipsum({ count: 1, units: 'paragraphs' })}</div>
-        <div className="separator" />
-        <div className="separator" />
-        <div className="separator" />
+        <div className="center">
+          <h2>Imaginary Bowling</h2>
+          <div className="paragraph center">
+            {ipsum({ count: 3, units: 'sentences' })}
+          </div>
+          <div className="separator" />
+          <Button bg>Make Reservation</Button>
+          <div className="separator" />
+        </div>
 
         <div className="home__promo">
           <PromoGrid
@@ -61,13 +62,45 @@ class Home extends Component {
                 image: food
               },
               {
-                title: 'Careers',
+                title: 'Employment',
                 subtitle: 'Now hiring',
                 button: 'See Positions',
                 image: strike
               }
             ]}
           />
+        </div>
+        <div className="separator" />
+        <div className="home__about">
+          <div>
+            <h3>Lorem Ipsum</h3>
+            <div className="paragraph">
+              {ipsum({ count: 2, units: 'sentences' })}
+            </div>
+            <Button outline secondary>
+              Ipsum
+            </Button>
+          </div>
+
+          <div>
+            <h3>Lorem Ipsum</h3>
+            <div className="paragraph">
+              {ipsum({ count: 2, units: 'sentences' })}
+            </div>
+            <Button outline secondary>
+              Ipsum
+            </Button>
+          </div>
+
+          <div>
+            <h3>Lorem Ipsum</h3>
+            <div className="paragraph">
+              {ipsum({ count: 2, units: 'sentences' })}
+            </div>
+            <Button outline secondary>
+              Ipsum
+            </Button>
+          </div>
         </div>
       </div>
     );
