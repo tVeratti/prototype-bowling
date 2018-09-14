@@ -11,4 +11,13 @@
 .paragraph {
   width: 60%;
   max-width: 50rem;
+
+  .button {
+    padding: 0.2rem;
+    line-height: 1;
+    min-height: 0;
+    & + .button {
+      margin: 0;
+    }
+  }
 }

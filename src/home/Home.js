@@ -19,9 +19,18 @@ class Home extends Component {
     return (
       <div className="home">
         <div className="center">
-          <h2>Imaginary Bowling</h2>
+          <h2>Web Design Demo</h2>
           <div className="paragraph center">
-            {ipsum({ count: 3, units: 'sentences' })}
+            This site is not for a real venue. This is a technical showcase and
+            portfolio piece for
+            <Button href="https://dev.veratti.co" secondary>
+              Veratti Web Development.
+            </Button>
+            If you like what you see and want similar work for your business,
+            then
+            <Button href="https://dev.veratti.co/contact" secondary>
+              let's talk!
+            </Button>
           </div>
           <div className="separator" />
           <Button bg>Make Reservation</Button>
