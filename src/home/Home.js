@@ -10,7 +10,7 @@ class Home extends Component {
   render() {
     const panels = [...Array(6)].map(_ => ({
       title: 'Lorem Ipsum',
-      subtitle: 'Dolor sit amet.',
+      subtitle: 'Dolor sit amet',
       button: 'Ipsum',
       image: ImgPlacholder
     }));
