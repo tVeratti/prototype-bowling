@@ -8,11 +8,11 @@ import './Home.scss';
 
 class Home extends Component {
   render() {
-    const panels = [...Array(6)].map(_ => ({
+    const panels = [...Array(6)].map((_) => ({
       title: 'Lorem Ipsum',
       subtitle: 'Dolor sit amet',
       button: 'Ipsum',
-      image: ImgPlacholder
+      image: ImgPlacholder,
     }));
 
     return (
@@ -20,15 +20,7 @@ class Home extends Component {
         <div className="center">
           <h2>Web Design Demo</h2>
           <div className="paragraph center">
-            This site is not for a real venue. This is a technical demo by
-            <Button href="https://dev.veratti.co" secondary>
-              Veratti Web Development.
-            </Button>
-            If this inspires you and your business or hobby needs a modern
-            website then
-            <Button href="https://dev.veratti.co/contact" secondary>
-              let's talk!
-            </Button>
+            This site is not for a real venue - This is a technical demo.
           </div>
           <div className="separator" />
           <Button bg>Lorem Ipsum</Button>
